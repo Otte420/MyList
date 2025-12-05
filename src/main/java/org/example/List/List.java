@@ -1,6 +1,6 @@
 package org.example.List;
 
-public class List
+public class List<T>
 {
     private Node head;
     private Node startNode;
@@ -13,7 +13,7 @@ public class List
 
     }
 
-    public int get(int index)
+    public T get(int index)
     {
         if(index >= size)
         {
@@ -38,10 +38,10 @@ public class List
         return size;
     }
 
-    public void add(int i)
+    public void add(T Value)
     {
         // Neuen Knoten setzen
-        var newNode = new Node(i);
+        var newNode = new Node(Value);
 
         // Startknoten setzen(nur beim erstem Element)
         if(startNode == null)
@@ -64,10 +64,10 @@ public class List
     }
 
     class Node{
-        public int Value;
+        T Value;
         public Node next;
 
-        public Node(int Value)
+        public Node(T Value)
         {
             this.Value = Value;
             this.next = null;

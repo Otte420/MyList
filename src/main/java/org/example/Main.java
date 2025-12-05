@@ -5,7 +5,7 @@ public class Main
 {
     static void main()
     {
-        var myList = new List();
+        var myList = new List<int>();
         myList.add(1);
         myList.add(5);
         myList.add(6);
